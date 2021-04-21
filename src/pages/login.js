@@ -6,6 +6,7 @@ import * as ROUTES from '../constants/routes';
 export default function Login(){
     const history = useHistory();
     const {firebase} = useContext(FirebaseContext);
+    console.log({firebase})
     const [emailAddress,setEmailAddress] = useState('');
     const [password,setPassword] = useState('');
     const[error,setError] = useState(false);
@@ -29,7 +30,7 @@ export default function Login(){
     return (
         <div className="container flex mx-auto max-w-screen-md items-center h-screen">
           <div className="flex w-3/5">
-            <img className='object-contain md:object-scale-down  ' src="/images/iphone-with-profile.jpg" alt="iPhone with Instagram app" />
+            <img className='w-screen h-full block' src="/images/iphone-with-profile.jpg" alt="iPhone with Instagram app" />
           </div>
           <div className="flex flex-col w-2/5">
             <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4 rounded">
@@ -57,10 +58,10 @@ export default function Login(){
                 <button
                   disabled={isInvalid}
                   type="submit"
-                  className={`bg-blue-medium text-white w-full rounded h-8 font-bold
-                ${isInvalid && 'opacity-50'}`}
+                  className={`bg-blue-400 text-white w-full rounded h-8 font-bold
+                  ${isInvalid && 'opacity-50'}`}
                 >
-                  Login
+                    Login
                 </button>
               </form>
             </div>
