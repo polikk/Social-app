@@ -23,8 +23,7 @@ export default function Login(){
         }
     };
     useEffect(()=>{
-        document.title='Intasamka'
-        //handleLogin();
+        document.title='Login '
     },[])
 
     return (
@@ -37,7 +36,7 @@ export default function Login(){
               <h1 className="flex justify-center w-full">
                 <img src="/images/logo.png" alt="Instagram" className="mt-2 w-6/12 mb-4" />
               </h1>
-                {error && <p className="mb-4 text-xs text-red-primary">{error}</p>}
+                {error && <p className="mb-4 text-xs text-red-500">{error}</p>}
               <form onSubmit={handleLogin} method="POST">
                 <input
                   aria-label="Enter your email address"
